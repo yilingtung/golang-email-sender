@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{{.Title}}</title>
+		<style type="text/css">
+			/* Client-specific Styles */
+			#outlook a {
+				padding: 0;
+			}
+			/* Force Outlook to provide a "view in browser" menu link. */
+			body {
+				width: 100% !important;
+				-webkit-text-size-adjust: 100%;
+				-ms-text-size-adjust: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			/* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+			.ExternalClass {
+				width: 100%;
+			}
+			/* Force Hotmail to display emails at full width */
+			.ExternalClass,
+			.ExternalClass p,
+			.ExternalClass span,
+			.ExternalClass font,
+			.ExternalClass td,
+			.ExternalClass div {
+				line-height: 100%;
+			}
+			/* Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
+			#backgroundTable {
+				margin: 0;
+				padding: 0;
+				width: 100% !important;
+				line-height: 100% !important;
+			}
+			img {
+				outline: none;
+				text-decoration: none;
+				-ms-interpolation-mode: bicubic;
+			}
+			a img {
+				border: none;
+			}
+			.image_fix {
+				display: block;
+			}
+			p {
+				margin: 1em 0;
+				color: #6a6a6f !important;
+				font-family: sans-serif;
+			}
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				color: #383838 !important;
+				margin: 0;
+			}
+			h1 a,
+			h2 a,
+			h3 a,
+			h4 a,
+			h5 a,
+			h6 a {
+				color: #6a6a6f !important;
+			}
+			h1 a:active,
+			h2 a:active,
+			h3 a:active,
+			h4 a:active,
+			h5 a:active,
+			h6 a:active {
+				color: #383838 !important; /* Preferably not the same color as the normal header link color.  There is limited support for psuedo classes in email clients, this was added just for good measure. */
+			}
+			h1 a:visited,
+			h2 a:visited,
+			h3 a:visited,
+			h4 a:visited,
+			h5 a:visited,
+			h6 a:visited {
+				color: #383838 !important; /* Preferably not the same color as the normal header link color. There is limited support for psuedo classes in email clients, this was added just for good measure. */
+			}
+			table td {
+				border-collapse: collapse;
+				text-align: center;
+			}
+			table {
+				border-collapse: collapse;
+				mso-table-lspace: 0pt;
+				mso-table-rspace: 0pt;
+			}
+			a {
+				color: #6a6a6f;
+				font-size: 12px;
+				line-height: 160%;
+				font-family: sans-serif;
+				text-decoration: none;
+				word-break: break-word;
+			}
+
+			/* custom setting */
+			h3 {
+				font-size: 16px;
+				line-height: 140%;
+				font-family: sans-serif;
+			}
+			p {
+				font-size: 12px;
+				line-height: 160%;
+				font-family: sans-serif;
+				margin: 0;
+			}
+
+			.button-link {
+				border-radius: 2px;
+				width: 100%;
+			}
+
+			.button-link a {
+				display: inline-block;
+				padding: 12px 16px;
+				width: 100%;
+				border: 1px solid #007aff;
+				background-color: #007aff;
+				color: white;
+				font-weight: bold;
+				font-size: 12px;
+				line-height: 112.5%;
+				font-family: Helvetica, Arial, sans-serif;
+				box-sizing: border-box;
+			}
+			.button-link a:hover,
+			.button-link a:active,
+			.button-link a:focus {
+				border-color: #0169db;
+				background-color: #0169db;
+			}
+		</style>
+	</head>
+	<body>
+		<table cellpadding="0" cellspacing="0" id="backgroundTable">
+			<tr>
+				<td style="padding: 32px">
+					<table
+						cellpadding="0"
+						cellspacing="0"
+						border="0"
+						align="center"
+						style="width: 100%; max-width: 400px"
+					>
+						<tr>
+							<td style="padding-bottom: 16px">
+								<table
+									cellpadding="0"
+									cellspacing="0"
+									border="0"
+									align="center"
+								>
+									<tr>
+										<td style="padding-bottom: 8px">
+											<img
+												class="image_fix"
+												style="margin: 0 auto"
+												src="{{.LogoImgUrl}}"
+												alt="logo"
+												title="TechTech"
+												width="112"
+												height="36"
+											/>
+										</td>
+									</tr>
+									<tr>
+										<td style="padding-bottom: 8px"><h3>重設密碼</h3></td>
+									</tr>
+									<tr>
+										<td>
+											<p>點擊下方的重設密碼按鈕<br />即可重新設定新密碼</p>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="button-link">
+								<a
+									href="{{.ResetLink}}"
+									target="_blank"
+									title="Password Resetting Link"
+									>重設密碼</a
+								>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding: 16px 0">
+								<p>如果你無法點擊上方的按鈕，請點擊下方的重設密碼連結</p>
+								<a
+									href="{{.ResetLink}}"
+									target="_blank"
+									title="Password Resetting Link"
+									>{{.ResetLink}}</a
+								>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img
+						class="image_fix"
+						src="{{.BannerImgUrl}}"
+						alt="background"
+						title="background"
+						width="100%"
+					/>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
